@@ -88,3 +88,93 @@
 
 //5. Write a function that accepts a function and returns a new function that logs its input and output.
 
+// function main(callback){
+//   return function(...args){
+//     console.log(args);
+//     console.log("output",callback(...args))
+//   }
+// }
+// const add=(a,b)=>{
+//     return a+b;
+// }
+// const ressult=main(add);
+// ressult(2,3)
+
+//Closures
+
+//1. Write a counter function using closure.
+
+// const counter=()=>{
+//     let count=0;
+//     return{
+//         inc:()=>{
+//          count++;
+//          return count;
+//         },
+//         dec:()=>{
+//          count--;
+//          return count;
+//         }
+//     }
+// }
+
+// const result=counter();
+// console.log(result.inc())
+// console.log(result.inc())
+
+// const main=(x)=>{
+//     return function(y){
+//       return x*y;
+//     }
+// }
+// const result=main(2);
+// console.log(result(5))
+
+// function mySecret(){
+//     let secret="Sjsdkjfkdkj12";
+
+//    return {
+//     setSecret:(str)=>{
+//         secret=str;
+        
+//     },
+//     getSecret:()=>{
+//   return secret;
+//     }
+//    }
+// }
+
+// const ressult=mySecret();
+// ressult.setSecret("#JDJ")
+// console.log(ressult.getSecret())
+
+// const memorizes=()=>{
+//    const result={};
+//    return function(callback){
+     
+//    } 
+  
+// }
+
+
+//5. Create a function that memoizes results of another function.
+
+// const main=()=>{
+//     const cache={};
+
+//     return function(num){
+//         if(cache[num]){
+//            cache[num]++;
+//            return cache;
+//         }
+//         cache[num]=1;
+//         return cache;
+
+//     }
+// }
+// const ressult=main();
+// console.log(ressult(2))
+// console.log(ressult(2))
+// console.log(ressult(2))
+// console.log(ressult(45))
+
